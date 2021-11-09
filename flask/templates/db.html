@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database</title>
+</head>
+<body>
+    <div class = "container">
+        <title>HW1 Demo</title>
+        <h1>Simple Database</h1>
+        <br/>
+        <form action="/db" METHOD="POST">
+            <input type="text" placeholder="NAME" name="name">
+    
+        </form>
+        <br/>
+        <table border="1" cellpadding="5" cellspacing="1">
+            <tr>
+                <td>Name</td>
+                <td>student_id</td>
+                <td>major</td>
+            </tr>
+            {% for data in db_data %}
+            <tr>
+                <td><font size="5">{{data.name}}</font></td>
+                <td><font size="5">{{data.student_id}}</font></td>
+                <td><font size="5">{{data.major}}</font></td>
+                <!-- <td><font size="5">{{data.name}}</font></td> -->
+            </tr>
+            {% endfor %}
+        </table>
+        <br/>
+        <a href="/">back</a>
+    </div>
+</body>
+</html>
